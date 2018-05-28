@@ -7,18 +7,21 @@ class QuestionList extends Component {
 
     state = { 
         questions: [],
-        question: '' 
-    };
+    }
 
     componentWillMount() {
-        //axios.get('https://gist.githubusercontent.com/sleeplesseditor/86759c6715ba89fe875ca886d759d482/raw/552d6ba67ee26e3f4dab87b85e6abca41c73a93e/quiz_question.json' )
-            //.then(response => this.setState({ questions: response.data }));
-        fetch('https://gist.githubusercontent.com/sleeplesseditor/86759c6715ba89fe875ca886d759d482/raw/552d6ba67ee26e3f4dab87b85e6abca41c73a93e/quiz_question.json')
-            .then(response => response.json())
-            .then(json => {
-                console.log(json);
-                this.setState({ questions: json.questions });
-            });
+        axios.get('https://gist.githubusercontent.com/sleeplesseditor/86759c6715ba89fe875ca886d759d482/raw/552d6ba67ee26e3f4dab87b85e6abca41c73a93e/quiz_question.json' )
+            .then(res => {
+                const questions = res.data;
+                console.log(questions);
+                this.setState({ questions });
+            })
+        // fetch('https://gist.githubusercontent.com/sleeplesseditor/86759c6715ba89fe875ca886d759d482/raw/552d6ba67ee26e3f4dab87b85e6abca41c73a93e/quiz_question.json')
+        //     .then(response => response.json())
+        //     .then(json => {
+        //         console.log(json);
+        //         this.setState({ questions: json.questions });
+        //     });
     }
 
     renderAnswers() {
@@ -28,7 +31,6 @@ class QuestionList extends Component {
     }
 
     render() {
-
         return (
             <div className="answer_list">
                 {this.renderAnswers()}
