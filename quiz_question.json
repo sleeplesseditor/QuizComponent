@@ -1,0 +1,19 @@
+{
+    "title": "An animal cell contains:",
+    "first_answer": [
+        {"option_1": "Cell wall", "correct": "false"},
+        {"option_2": "Ribosomes", "correct": "true"} 
+    ],
+    "second_answer": [
+        {"option_3": "Cytoplasm", "correct": "true"},
+        {"option_4": "Chloroplast", "correct": "false"}
+    ],
+    "third_answer": [
+        {"option_5": "Partially permeable membrane", "correct": "true"},
+        {"option_6": "Impermeable membrane", "correct": "false"}
+    ],
+    "fourth_answer": [
+        {"option_7": "Cellulose", "correct": "false"},
+        {"option_8": "Mitochondria", "correct": "true"}
+    ]
+}
