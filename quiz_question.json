@@ -16,4 +16,12 @@
         {"option_7": "Cellulose", "correct": "false"},
         {"option_8": "Mitochondria", "correct": "true"}
     ]
+},
+
+{
+    "title": "An animal cell contains:",
+    "options" : [
+        {"title": "Cell wall", "correct": "false"},
+        {"title": "Ribosomes", "correct": "true"} 
+    ]
 }

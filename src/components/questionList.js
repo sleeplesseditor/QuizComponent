@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import './style/style.css';
 
 class QuestionList extends Component {   
     componentWillMount() {
@@ -8,10 +9,10 @@ class QuestionList extends Component {
         console.log(this.props.questions);
     }
 
-    renderAnswers(question) {
+    renderQuestions(question) {
         return (
             <div>
-                <h1>{question.title}</h1>
+                <h1 className="answer_title">{question.title}</h1>
             </div>
         );
     }
@@ -19,7 +20,7 @@ class QuestionList extends Component {
     render() {
         return (
             <div className="answer_list">
-                {this.props.questions.map(this.renderAnswers)}
+                {this.props.questions.map(this.renderQuestions)}
             </div>
         );
     }
