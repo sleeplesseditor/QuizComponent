@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import './style/style.css';
 
+// import QuestionDetail from './questionDetail';
+
 class QuestionList extends Component {   
     componentWillMount() {
         this.props.fetchQuestions();
@@ -11,8 +13,15 @@ class QuestionList extends Component {
 
     renderQuestions(question) {
         return (
-            <div>
+            <div key={question.title}>
                 <h1 className="answer_title">{question.title}</h1>
+                <br/>
+                <div>
+                    <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider round"></span>
+                    </label>
+                </div>
             </div>
         );
     }

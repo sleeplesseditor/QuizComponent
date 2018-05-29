@@ -1,14 +1,12 @@
 import React from 'react';
+import './style/style.css';
 
 const QuestionDetail = ({ question }) => {
-    const { title, option_1, option_2 } = question;
+    const { title } = question;
 
     return (
-        <div className="">
-            <h1>{title}</h1>
-            <br/>
-            <p>{option_1}</p>
-            <p>{option_2}</p>
+        <div>
+            <h1 className="answer_title">{question.title}</h1>            
         </div>
     );
 };
