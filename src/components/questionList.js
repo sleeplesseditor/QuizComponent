@@ -1,42 +1,32 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-import QuestionDetail from './questionDetail';
-
-class QuestionList extends Component {
-
-    state = { 
-        questions: [],
-    }
-
+class QuestionList extends Component {   
     componentWillMount() {
-        axios.get('https://gist.githubusercontent.com/sleeplesseditor/86759c6715ba89fe875ca886d759d482/raw/552d6ba67ee26e3f4dab87b85e6abca41c73a93e/quiz_question.json' )
-            .then(res => {
-                const questions = res.data;
-                console.log(questions);
-                this.setState({ questions });
-            })
-        // fetch('https://gist.githubusercontent.com/sleeplesseditor/86759c6715ba89fe875ca886d759d482/raw/552d6ba67ee26e3f4dab87b85e6abca41c73a93e/quiz_question.json')
-        //     .then(response => response.json())
-        //     .then(json => {
-        //         console.log(json);
-        //         this.setState({ questions: json.questions });
-        //     });
+        this.props.fetchQuestions();
+        console.log(this.props.questions);
     }
 
-    renderAnswers() {
-        return this.state.questions.map(question => 
-            <QuestionDetail key={question.title} question={question}/>
+    renderAnswers(question) {
+        return (
+            <div>
+                <h1>{question.title}</h1>
+            </div>
         );
     }
 
     render() {
         return (
             <div className="answer_list">
-                {this.renderAnswers()}
+                {this.props.questions.map(this.renderAnswers)}
             </div>
         );
     }
 }
 
-export default QuestionList;
+function mapStateToProps(state) {
+    return { questions: state.questions };
+}
+
+export default connect(mapStateToProps, actions)(QuestionList);
