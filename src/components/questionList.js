@@ -19,21 +19,33 @@ class QuestionList extends Component {
                 <div>
                     <label className="switch">
                         <input type="checkbox" />
-                        <span className="slider round"></span>
+                        <div className="slider round">
+                            <span className="on">ON</span>
+                            <span className="off">OFF</span>
+                        </div>
                     </label>
                 </div>
             </div>
         );
+    }
+    
+    //Helper function for 'Answer is correct/Answer is incorrect' display
+    renderVerdict() {
+
     }
 
     render() {
         return (
             <div className="answer_list">
                 {this.props.questions.map(this.renderQuestions)}
+                <br />
+                <p className="verdict">The answer is incorrect</p>
             </div>
         );
     }
 }
+
+//{this.renderVerdict}
 
 function mapStateToProps(state) {
     return { questions: state.questions };
