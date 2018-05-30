@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style/style.css';
+import './style/style.scss';
 
 import QuestionList from './questionList';
 

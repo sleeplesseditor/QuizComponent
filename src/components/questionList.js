@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import './style/style.css';
-
-// import QuestionDetail from './questionDetail';
+import './style/style.scss';
 
 class QuestionList extends Component {   
     componentWillMount() {
@@ -20,8 +18,8 @@ class QuestionList extends Component {
                     <label className="switch">
                         <input type="checkbox" />
                         <div className="slider round">
-                            <span className="on">ON</span>
-                            <span className="off">OFF</span>
+                            <p className="on">{question.answer1.option1}</p>
+                            <p className="off"></p>
                         </div>
                     </label>
                 </div>
@@ -29,7 +27,7 @@ class QuestionList extends Component {
         );
     }
     
-    //Helper function for 'Answer is correct/Answer is incorrect' display
+    //Helper function for 'Answer is correct/Answer is incorrect' display, targeting 'correct' flag in JSON files
     renderVerdict() {
 
     }

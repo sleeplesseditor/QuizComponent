@@ -1,6 +1,6 @@
 # Quiz Section
 
-A multiple choice section for a quiz on biology.
+A multiple choice section for a quiz on biology. Currently a WIP project, due to issues with accessing nested JSON data.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
