@@ -5,7 +5,7 @@ import {
 
 //Pull question title and answer options from external file source for reusability
 export function fetchQuestions() {
-    const request = axios.get('https://gist.githubusercontent.com/sleeplesseditor/86759c6715ba89fe875ca886d759d482/raw/bffd4765ea6499b22e4e82c6998b5bd8a406e736/question.json')
+    const request = axios.get('https://gist.githubusercontent.com/sleeplesseditor/8d6693e67925967cdd6541489bbfa333/raw/446c5f509550d796a8af8501524b5c9d883deb35/question2.json')
 
     //Requires correctly formatted JSON file with correct answer flags
     return {

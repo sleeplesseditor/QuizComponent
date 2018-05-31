@@ -43,7 +43,7 @@ body {
 .switch {
 	position: relative;
 	display: inline-block;
-	width: 309px;
+	width: 600px;
 	height: 50px;
 	input {
 		display: none;
@@ -64,7 +64,7 @@ body {
 		position: absolute;
 		content: "";
 		height: 43px;
-		width: 45px;
+		width: 250px;
 		left: 3px;
 		bottom: 2px;
 		background-color: $background_color_3;
@@ -77,9 +77,9 @@ input {
 		&+.slider {
 			background-color: $background_color_2;
 			&:before {
-				-webkit-transform: translateX(255px);
-				-ms-transform: translateX(255px);
-				transform: translateX(255px);
+				-webkit-transform: translateX(341px);
+				-ms-transform: translateX(341px);
+				transform: translateX(341px);
 			}
 		}
 	}
@@ -92,7 +92,7 @@ input {
 .slider.round {
 	border-radius: 100px;
 	&:before {
-		border-radius: 50%;
+		border-radius: 21%;
 	}
 }
 .on {
@@ -102,6 +102,6 @@ input {
 }
 .off {
 	text-align: right;
-	margin-left: 10px;
-	margin-top: 12px;
+	margin-right: 10px;
+	margin-top: -5px;
 }

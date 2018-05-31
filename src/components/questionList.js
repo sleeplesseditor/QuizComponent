@@ -4,7 +4,7 @@ import * as actions from '../actions';
 import './style/style.scss';
 
 class QuestionList extends Component {   
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchQuestions();
         console.log(this.props.questions);
     }
@@ -17,9 +17,9 @@ class QuestionList extends Component {
                 <div>
                     <label className="switch">
                         <input type="checkbox" />
-                        <div className="slider round">
-                            <p className="on">{question.answer1.option1}</p>
-                            <p className="off"></p>
+                        <div className="slider">
+                                <p className="on">{question.left}</p>
+                                <p className="off">{question.right}</p>
                         </div>
                     </label>
                 </div>
