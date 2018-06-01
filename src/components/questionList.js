@@ -9,17 +9,20 @@ class QuestionList extends Component {
         console.log(this.props.questions);
     }
 
+    //Pull keys from JSON to tidy up code
     renderQuestions(question) {
+        const { left, right, title } = question;
+
         return (
-            <div key={question.title}>
-                <h1 className="answer_title">{question.title}</h1>
+            <div key={title}>
+                <h1 className="answer_title">{title}</h1>
                 <br/>
                 <div>
                     <label className="switch">
                         <input type="checkbox" />
                         <div className="slider">
-                                <p className="on">{question.left}</p>
-                                <p className="off">{question.right}</p>
+                                <p className="on">{left}</p>
+                                <p className="off">{right}</p>
                         </div>
                     </label>
                 </div>
@@ -32,6 +35,7 @@ class QuestionList extends Component {
 
     }
 
+    //Plan to convert verdict p tag to if/else based on correct flag selection
     render() {
         return (
             <div className="answer_list">
@@ -42,8 +46,6 @@ class QuestionList extends Component {
         );
     }
 }
-
-//{this.renderVerdict}
 
 function mapStateToProps(state) {
     return { questions: state.questions };
